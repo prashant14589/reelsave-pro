@@ -1,0 +1,27 @@
+name = "reelsave-pro-downloader"
+main = "src/index.ts"
+compatibility_date = "2024-04-25"
+
+[env.development]
+name = "reelsave-pro-downloader-dev"
+
+[env.production]
+name = "reelsave-pro-downloader-prod"
+
+[[env.production.routes]]
+pattern = "https://dl.reelsave.app/*"
+zone_name = "reelsave.app"
+
+[[env.development.routes]]
+pattern = "https://dl-dev.reelsave.app/*"
+zone_name = "reelsave.app"
+
+[build]
+command = "pnpm install && pnpm run build"
+cwd = "."
+
+[env.production.vars]
+ENVIRONMENT = "production"
+
+[env.development.vars]
+ENVIRONMENT = "development"

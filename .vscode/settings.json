@@ -1,0 +1,18 @@
+{
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "file": "CLAUDE.md"
+    },
+    {
+      "file": "AGENTS.md"
+    },
+    {
+      "file": "STATUS.md"
+    }
+  ],
+  "chat.promptFiles": true,
+  "chat.promptFilesLocations": {
+    ".github/prompts": true,
+    ".vscode/prompts": true
+  }
+}
