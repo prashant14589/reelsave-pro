@@ -59,8 +59,7 @@ async function callRapidAPI(
     }
 
     const data: ApiResponse = await response.json()
-    console.log('RapidAPI response keys:', Object.keys(data))
-    console.log('Media items:', JSON.stringify(data.media?.map(m => ({ type: m.type, quality: m.quality }))))
+
 
     if (!data.media || !Array.isArray(data.media) || data.media.length === 0) {
       console.error('No media array in response')
